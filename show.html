@@ -11,22 +11,29 @@
   <a-scene vr-mode-ui="enabled: false" renderer="gammaOutput: true;">
     <!-- Particle system uses 'default' preset, setting custom colors. -->
     <a-entity position="0 2.25 -15" particle-system="preset:snow; color: #fffafa,#f0f8ff; size:8; maxAge:12; particleCount:3000;"></a-entity>
-    
+
     <!-- サンタ -->
     <a-assets>
       <a-asset-item id="santa" src="models/santa.glb"></a-asset-item>
+      <a-asset-item id="santa_e" src="models/santa_e.glb"></a-asset-item>
       <a-asset-item id="santa_k" src="models/santa_k.glb"></a-asset-item>
+      <a-asset-item id="santa_f" src="models/santa_f.glb"></a-asset-item>
+      <a-asset-item id="santa_a" src="models/santa_a.glb"></a-asset-item>
     </a-assets>
 
-    <a-entity gltf-model="#santa" play-all-model-animations="" scale="0.15 0.15 0.15" position="-1.5 0 -5" rotation="0 0 0" visible="true">
+    <a-entity gltf-model="#santa_e" play-all-model-animations="" scale="0.15 0.15 0.15" position="-1.5 0 -5" rotation="0 0 0" visible="true">
     </a-entity>
     <a-entity gltf-model="#santa_k" play-all-model-animations="" scale="0.15 0.15 0.15" position="-0.5 0 -4" rotation="0 0 0" visible="true">
     </a-entity>
-    <a-entity gltf-model="#santa" play-all-model-animations="" scale="0.15 0.15 0.15" position="0.5 0 -3" rotation="0 0 0" visible="true">
+    <a-entity gltf-model="#santa_f" play-all-model-animations="" scale="0.15 0.15 0.15" position="0.5 0 -3" rotation="0 0 0" visible="true">
     </a-entity>
-    <a-entity gltf-model="#santa" play-all-model-animations="" scale="0.15 0.15 0.15" position="1.5 0 -2" rotation="0 0 0" visible="true">
+    <a-entity gltf-model="#santa_a" play-all-model-animations="" scale="0.15 0.15 0.15" position="1.5 0 -2" rotation="0 0 0" visible="true">
     </a-entity>
   
+    <div style="position: absolute; bottom: 0; right: 0; z-index: 3; color: orangered; text-align: left; padding: 5px;">
+      <p>test</p>
+      <p>test2</p>
+    </div>
   </a-scene>
 </body>
 

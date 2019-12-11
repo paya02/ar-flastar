@@ -19,20 +19,22 @@
 
     <!-- サンタ -->
     <a-assets>
-      <a-asset-item id="santa" src="models/santa.glb"></a-asset-item>
+      <a-asset-item id="santa_e" src="models/santa_e.glb"></a-asset-item>
       <a-asset-item id="santa_k" src="models/santa_k.glb"></a-asset-item>
+      <a-asset-item id="santa_f" src="models/santa_f.glb"></a-asset-item>
+      <a-asset-item id="santa_a" src="models/santa_a.glb"></a-asset-item>
     </a-assets>
 
     <!-- a-markerのtypeにpatternを設定, 作ったpattファイルをurlにを指定 -->
     <a-marker type="pattern" url="pattern-mssp-soulmate.patt">
       <!-- マーカーを原点(上向き)に置いた時の座標 -->
-      <a-entity gltf-model="#santa" scale="0.15 0.15 0.15" position="-1.5 0 0.45" rotation="-90 0 0">
+      <a-entity gltf-model="#santa_e" scale="0.15 0.15 0.15" position="-1.5 0 0.45" rotation="-90 0 0">
       </a-entity>    
       <a-entity gltf-model="#santa_k" scale="0.15 0.15 0.15" position="-0.5 0 0.45" rotation="-90 0 0">
       </a-entity>
-      <a-entity gltf-model="#santa" scale="0.15 0.15 0.15" position="0.5 0 0.45" rotation="-90 0 0">
+      <a-entity gltf-model="#santa_f" scale="0.15 0.15 0.15" position="0.5 0 0.45" rotation="-90 0 0">
       </a-entity>
-      <a-entity gltf-model="#santa" scale="0.15 0.15 0.15" position="1.5 0 0.45" rotation="-90 0 0">
+      <a-entity gltf-model="#santa_a" scale="0.15 0.15 0.15" position="1.5 0 0.45" rotation="-90 0 0">
       </a-entity>
     </a-marker>
     <a-entity camera></a-entity>  
