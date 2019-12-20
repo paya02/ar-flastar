@@ -10,9 +10,11 @@
   <!-- aframe-particle-system-component -->
   <!-- <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script> -->
   <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="assets/stylesheets/style.css">
 </head>
 
 <body style="margin : 0px; overflow: hidden" oncontextmenu="return false;">
+
   <a-scene embedded arjs="debugUIEnabled: false" vr-mode-ui="enabled: false" renderer="gammaOutput: true;">
     <!-- Particle system uses 'default' preset, setting custom colors. -->
     <a-entity position="0 2.25 -15" particle-system="preset:snow; color: #fffafa,#f0f8ff; size:8; maxAge:12; particleCount:3000;"></a-entity>
@@ -49,13 +51,13 @@
       <a-entity gltf-model="#mic" scale="0.15 0.15 0.15" position="1.5 0.7 0.45" rotation="-90 0 0">
       </a-entity>
 
-      <div class="link-panel">
-        <a href="credit.html"><p>CREDIT</p></a>
-        <a href="show.html"><p>SHOW</p></a>
-      </div>  
-    </a-marker>
-    <a-entity camera></a-entity>  
+      </a-marker>
+    <a-entity camera></a-entity>
   </a-scene>
-</body>
+  <div class="link-panel">
+    <a href="credit.html"><p>MEMBER</p></a>
+    <a href="show.html"><p>SHOW</p></a>
+  </div>
 
+</body>
 </html>
