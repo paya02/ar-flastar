@@ -13,7 +13,8 @@ html{
   font-size: 16px;
 }
 body {
-  font-family: Verdana, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+  font-family: "M PLUS Rounded 1c", Verdana, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+  color: #ffffff;
 }
 header, footer, nav, menu, article, aside, section, details, figcaption, figure{
   display: block;
@@ -27,6 +28,9 @@ table {
 img {
   vertical-align: bottom;
 }
+a {
+  color: #ffffff;
+}
 a img {
   border: none;
 }
@@ -37,7 +41,42 @@ i{
   font-style: normal;
 }
 
+
 /* ---------------------------------- */
+body {
+  height: 1000px;  
+  background: -webkit-linear-gradient(top, #4c4e75 0%, #1f2273 100%);
+  background: linear-gradient(top, #4c4e75 0%, #1f2273 100%);
+}
+
+h1 {
+  margin: 50px 0;
+  font-size: 4vh;
+}
+
+h2 {
+  color: #f0f8ff;
+  position: relative;
+  display: inline-block;
+  margin: 47px 0;
+  font-size: 3vh;
+}
+h2:before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  top: 50%;
+  left: 20%;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  z-index: -1;
+  filter: blur(5px);
+}
+.blue::before {
+  background: #87cff0;
+}
 
 .link-panel {
   z-index: 999;
@@ -47,4 +86,105 @@ i{
   color: orangered;
   text-align: left;
   padding: 5px;
+}
+#main .link-panel {
+  position: inherit;
+  margin: 20px 0;
+  font-size: 3vh;
+}
+
+#background {
+  width: 100%;
+  height: 100%;
+}
+
+#main {
+
+}
+
+#container {
+  margin: 0 7%;
+}
+
+.snow_box {
+  background-image: url(../images/snow1.png), url(../images/snow2.png), url(../images/snow3.png);
+	-webkit-animation: snow 20s linear infinite;
+	animation: rgb(121, 118, 118) 20s linear infinite;
+	/* width: 300px;
+	height: 300px; */
+}
+
+/* プロフィールカード */
+.profile-card {
+  background-color: #00000044;
+  position: relative;
+  border-radius: 10px;
+}
+.profile-card:before {
+  content: "";
+  background: inherit;
+  z-index: -1;
+  -webkit-filter: blur(20px);
+  -ms-filter: blur(20px);
+  filter: blur(20px);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0; top: 0;
+  margin: 0;
+  padding: 0;
+}
+.profile-card img {
+  width: 150px;
+  height: 150px;
+}
+.inline-block {
+  display: inline-block;
+  padding:  20px;
+  vertical-align: top;
+}
+
+@-webkit-keyframes snow {
+	0% { background-position: 0px 0px, 0px 0px, 0px 0px }
+	100% {
+		background-position: 500px 1000px, 400px 400px, 300px 300px;
+	}
+}
+@keyframes snow {
+	0% { background-position: 0px 0px, 0px 0px, 0px 0px }
+	100% {
+		background-position: 500px 1000px, 400px 400px, 300px 300px;
+	}
+}
+
+/* レスポンシブ */
+@media screen and (max-width:480px){
+  /*画面幅が480pxまでの時*/
+  #container{
+    margin: 0 7%;
+    max-width: 480px;
+  }
+  .profile-card img {
+    width: 100px;
+    height: 100px;
+  }
+  .profile-card .card {
+    width: 340px;
+  }
+  .profile-card .content {
+    width: 150px;
+  }
+}
+@media screen and (min-width:781px){
+  /*画面幅が781px以上の時*/
+  #container{
+    margin: 0 25%;
+    max-width: 781px;
+  }
+  .profile-card .card {
+    width: 650px;
+  }
+  .profile-card .content {
+    width: 400px;
+  }
 }
