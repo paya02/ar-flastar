@@ -50,7 +50,7 @@ i{
 }
 
 h1 {
-  margin: 50px 0;
+  padding: 50px 0;
   font-size: 4vh;
 }
 
@@ -166,6 +166,7 @@ h2:before {
 @media screen and (max-width:480px){
   /*画面幅が480pxまでの時*/
   h1 {
+    padding: 20px 0;
     font-size: 3.5vh;
   }
   #container{
